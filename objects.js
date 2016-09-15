@@ -7,6 +7,12 @@
             - Add a property named `contents` and set it to be an empty array.
  */
 
+var plainBox = {};
+plainBox.color = "pink";
+plainBox.size = 7;
+plainBox.contents = [];
+
+console.log(plainBox);
 
 /*
     # An object with properties declared line by line
