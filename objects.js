@@ -53,6 +53,18 @@ console.log(stockCar);
         Finally, invoke your new function while passing in the `plainPerson` object and additional agrument values, then store the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just the value at `name`, and just the value at `age`.
  */
 
+var plainPerson = {};
+
+function buildPerson(person, nameString, age){
+    person.name= nameString;
+    person.age= age;
+
+    return person;
+}
+buildPerson(plainPerson, "Bob", 25); // invokes the function
+
+console.log(buildPerson(plainPerson, "Bob", 25));
+
 
 /*
     # Display values of objects that are inside an array
