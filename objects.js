@@ -61,9 +61,14 @@ function buildPerson(person, nameString, age){
 
     return person;
 }
-buildPerson(plainPerson, "Bob", 25); // invokes the function
+// buildPerson(plainPerson, "Bob", 25); <-- invokes the function 
 
-console.log(buildPerson(plainPerson, "Bob", 25));
+var completePerson = buildPerson(plainPerson, "Bob", 25);
+
+
+console.log(completePerson);
+console.log(plainPerson.name);
+console.log(plainPerson.age);
 
 
 /*
@@ -88,6 +93,7 @@ console.log(buildPerson(plainPerson, "Bob", 25));
             =====
             ...
  */
+
 
 
 /*
