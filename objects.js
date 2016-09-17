@@ -310,6 +310,9 @@ function addPassengers(car, names, ages){
     for(i = 0; i < names.length; i++){
         var newPlainPerson = {};
         car.passengers.push(buildPerson(newPlainPerson, names[i], ages[i]));
+
+        //you could also use: car.passengers[i] = buildPerson(newPlainPerson, names[i], ages[i]);
+        
     }
 return car;
 }
