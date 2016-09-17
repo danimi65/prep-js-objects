@@ -169,6 +169,20 @@ printProcessedOrders(arrayOfObjects);
         Go ahead and create some more objects and pass them to this function. Have fun with it.
 */
 
+var sumObj = {
+a : 7,
+b : 10,
+result: undefined
+};
+
+function objectAddition(object) {
+    object.result = object.a + object.b; 
+    
+return object; 
+}
+var sumObjResult = objectAddition(sumObj);
+
+console.log(objectAddition(sumObjResult));
 
 /*
     # Print sum function and add as new key-value
@@ -184,7 +198,11 @@ printProcessedOrders(arrayOfObjects);
         Invoke this function and pass in your object. Further test by changing the values of the object being passed in or **create more** objects and invoke your function multiple times.
  */
 
-
+function printObj(object){
+    object.output = "'"+ object.a + " + "  + object.b  + " = "  + object.result+ "'"; 
+    return object.output;
+ }
+console.log(printObj(sumObj));
 /*
     # Putting stuff in `plainBox`
         Declare a function named putInPlainBox and a single parameter which will be an object. Within this function, write a FOR loop that adds **10** random number values to the array referenced at the `contents` property of the object being passed in. This function will return the object.
