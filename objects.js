@@ -210,6 +210,15 @@ console.log(printObj(sumObj));
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named plainBoxResult and use `console.log` to inspect your results.
  */
 
+function putInPlainBox(object){
+    for(var i = 0; i < 10; i++){
+        object.contents[i] = Math.floor((Math.random() *100) +1);
+        }
+        return object;
+
+}
+var putInPlainBoxContent = putInPlainBox(plainBox);
+console.log(putInPlainBoxContent);
 
 /*
     # Detecting transmission
@@ -220,6 +229,16 @@ console.log(printObj(sumObj));
         Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
 
+ function detectingTransmission(object){
+    if(object.automaticTransmission === true){
+        return "automaticTransmission is true";
+    } else{
+        return "automaticTransmission is false";
+    }
+
+ }
+ var isAutomaticTransmission = detectingTransmission(stockCar);
+console.log(isAutomaticTransmission);
 
 /*
     # Who's driving this thing?!
@@ -230,6 +249,13 @@ console.log(printObj(sumObj));
         Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect your results. Consider using `plainPerson` as your driver.
  */
 
+function addDriver(car, person){
+    car.driver = person;
+    return car;
+
+}
+var stockCarWithDriver = addDriver(stockCar, plainPerson);
+console.log(stockCarWithDriver);
 
 /*
     # Final Boss
