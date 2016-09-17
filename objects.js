@@ -220,6 +220,19 @@ function putInPlainBox(object){
 var putInPlainBoxContent = putInPlainBox(plainBox);
 console.log(putInPlainBoxContent);
 
+// another method: 
+
+// function putInPlainBox(obj){
+//  for(var i = 0; i <10; i++){
+//  var randomNum = Math.floor(Math.random() * 100);
+//  obj.contents.push(randomNum);
+// }
+//  return obj;
+// }
+// console.log(putInPlainBox(plainBox));
+
+
+
 /*
     # Detecting transmission
         Declare a function named detectingTranmission and a single parameter which will be an object. Within this function you will check to see if the car has an automatic or manual transmission and print the results on screen.
@@ -289,4 +302,26 @@ console.log(stockCarWithDriver);
         'Marifel, age 19, is riding dirty!'
         'Victor, age 19, is riding dirty!'
  */
+
+var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
+var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
+
+function addPassengers(car, names, ages){
+    for(i = 0; i < names.length; i++){
+        var newPlainPerson = {};
+        car.passengers.push(buildPerson(newPlainPerson, names[i], ages[i]));
+    }
+return car;
+}
+console.log(addPassengers(stockCar, passengerList, passengerAges));
+
+
+
+
+
+
+
+
+
+
 
